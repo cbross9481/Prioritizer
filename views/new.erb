@@ -1,0 +1,42 @@
+<a href="/index"><button>Home</button></a>
+<p id=create_header>Create a task</p>
+<form action='/new' method="POST">
+	<label for="title">Give your task a title</label>
+	<input type="text" class="title" name="title"><br><br>
+	<label for="title">Give a description for your task</label><br>
+	<textarea class="description" cols="86" rows ="20" name="description"></textarea><br><br><br>
+	<label for='frequency'>How frequently would you do this task?</label><br>
+	<input type='radio' id='frequency' name='frequency' value='weekly'>
+	<label>Weekly</label>
+	<input type='radio' id='frequency' name='frequency' value='monthly'>
+	<label>Monthly</label>
+	<input type='radio' id='frequency' name='frequency' value='yearly'>
+	<label>Yearly</label><br><br>
+	<label for="satisfacton">What level of satisfaction will you receive from completing this task?</label><br>
+	<select name="satisfaction">
+		<%= erb :selection %>
+	</select><br><br>
+	<label for="procrastinate">How much have you been procrastinating this task?</label><br>
+	<select name="procrastinate">
+		<%= erb :selection %>
+	</select><br><br>
+	<label for="people">How much will others benefit from completing task?</label><br>
+	<select name="people">
+		<%= erb :selection %>
+	</select><br><br>
+	<label for="travel">How much travelling is involved in completing this task?</label><br>
+	<select name="travel">
+		<%= erb :selection %>
+	</select><br><br>
+	<label for="strength">How much physical strength is involved in completing this task?</label><br>
+	<select name="strength">
+		<%= erb :selection %>
+	</select><br><br>
+	<label for="socialize">How much socializing is involved in completing this task?</label><br>
+	<select name="socialize">
+		<%= erb :selection %> 	
+	</select><br><br>
+	<label for="start_date">When is your expected end date?</label><br>
+	<input type="date" name="end_date"><br><br>
+	<input type="submit" name="submit">
+</form>

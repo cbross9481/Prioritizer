@@ -1,0 +1,59 @@
+<a href="/index"><button>Home</button></a>
+<h1 id="dashboard">Welcome to Dashboard</h1>
+<h2>Today's Date: <%= @todays_date %></h2><br><br>
+<div id="total_sections">
+	<div id="section_1">
+	<h2>Most Important Tasks:</h2>
+		<% i = 0 %>
+		<% @priority_box.each do |x| %>
+			<p id="id"><a href="task/<%= x["id"] %>"><%= x["title"]%></a><br>
+			<%= x["description"]%><br>
+			<%= x["end_date"]%><br></p><br>
+			<% i += 1 %>
+			<% break if i == 3 %>
+		<% end %>
+	</div>
+	<div id="section_2">
+	<h2>Upcoming Tasks:</h2>
+	<% i = 0 %>
+		<% @date_box.each do |x| %>
+			<p id="id"><a href="task/<%= x["id"] %>"><%= x["title"]%></a><br>
+			<%= x["description"]%><br>
+			<%= x["end_date"]%><br></p><br>
+			<% i += 1 %>
+			<% break if i == 5 %>
+		<% end %>
+	</div>
+<br><br>
+<br><br>
+	<div class="task_by_dates">
+  <button class="timetabs" onclick="openTime('Week')">Week</button>
+  <button class="timetabs" onclick="openTime('Month')">Month</button>
+  <button class="timetabs" onclick="openTime('Year')">Year</button>
+</div>
+
+<div id="Week" class="tabcontent">
+	<h2>This Week</h2>
+	<% @week_box.each do |x| %>
+			<p id="id"><a href="task/<%= x["id"] %>"><%= x["title"]%></a><br>
+			<%= x["description"]%><br>
+			<%= x["end_date"]%><br></p><br>
+		<% end %>
+</div>
+<div id="Month" class="tabcontent">
+	<h2>This Month</h2>
+	<% @month_box.each do |x| %>
+			<p id="id"><a href="task/<%= x["id"] %>"><%= x["title"]%></a><br>
+			<%= x["description"]%><br>
+			<%= x["end_date"]%><br></p><br>
+		<% end %>
+</div>
+<div id="Year" class="tabcontent">
+	<h2>This Year</h2>
+	<% @year_box.each do |x| %>
+			<p id="id"><a href="task/<%= x["id"] %>"><%= x["title"]%></a><br>
+			<%= x["description"]%><br>
+			<%= x["end_date"]%><br></p><br>
+		<% end %>
+</div>
+

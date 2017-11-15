@@ -1,0 +1,113 @@
+#hello{
+	color:darkblue;
+	font-family: Cooper Black;
+	font-weight: bold;
+	font-style: italic;
+	font-size:40px;
+}
+#question{
+	color:darkblue;
+	font-weight: bold;
+	font-size: 25pxs;
+}
+body{
+	width: 1000px;
+    margin: 0 auto;
+}
+#create_header{
+	font-family: Cooper Black;
+	font-size: 30px;
+	color:darkblue;
+
+}
+.response{
+	width: 15px;
+}
+.description{
+	width: 250px;
+	height: 50px;
+}
+#id{
+	font-size: 15px;
+	font-weight: bold;
+	font-family: Cooper Black;
+	left: 10px;
+	color: red;
+}
+#dashboard{
+	text-align: center;
+	position: relative;
+	font-size: 30px;
+}
+#section_1{
+	vertical-align: top;
+	text-align: center;
+	width: 225px;
+	position: relative;
+	border: 5px solid black;
+	display: inline-block;
+	padding: 10px;
+}
+#section_2{
+	text-align: center;
+	width: 225px;
+	position: relative;
+	border: 5px solid black;
+	display: inline-block;
+	padding: 10px;
+	left: 75px;
+}
+#task_pic{
+	position: relative;
+	left: 100px;
+}
+#question{
+	position: relative;
+	left: 75px;
+	font-size: 30px;
+}
+#action_button{ 		
+	position: relative;
+	left: 95px;
+	font-size: 20px;
+}
+#total_section{
+	vertical-align: top;
+	border: 5px solid red;
+}
+iv.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+/*div.timetabs button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}*/
+
+/* Change background color of buttons on hover */
+/*div.timetabs button:hover {
+    background-color: #ddd;
+}*/
+
+/* Create an active/current tablink class */
+/*div.timetabs button.active {
+    background-color: #ccc;
+}*/
+
+/* Style the tab content */
+/*.tabcontent {
+  padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}*/
+
+
+

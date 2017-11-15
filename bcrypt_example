@@ -1,0 +1,32 @@
+require 'bcrypt'
+
+sample_hash = {}
+puts "Choose your password"
+
+password_1 = gets.chomp
+password_2 = gets.chomp
+
+p encrypted_password_1 = BCrypt::Password.create(password_1)
+p encrypted_password_2 = BCrypt::Password.create(password_2)
+
+p db_password_1 = BCrypt::Password.new(encrypted_password_1)
+p db_password_2 = BCrypt::Password.new(encrypted_password_2)
+
+sample_hash[:password_1] = encrypted_password_1
+sample_hash[:password_2] = encrypted_password_2
+
+
+p sample_hash_1 = sample_hash[:password_1].to_s
+p sample_hash_2 = sample_hash[:password_2].to_s
+
+
+sample_hash_1 = BCrypt::Password.new(sample_hash_1)
+sample_hash_2 = BCrypt::Password.new(sample_hash_2)
+
+
+puts "Type in your password"		
+type_1 = gets.chomp 
+type_2 = gets.chomp
+
+p sample_hash_1 == type_1
+p sample_hash_2 == type_2

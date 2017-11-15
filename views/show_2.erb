@@ -1,0 +1,19 @@
+<a href="/dashboard"><button>Dashboard</button></a>
+
+<h1><%= @task["title"] %></h1>
+<h2>description: <%= @task["description"] %></h2>
+<h2>Expected End Date: <%= @task["end_date"] %></h2><br><br>
+<h2>satisfaction: <%= @task["satisfaction"] %></h2>
+<h2>procrastinate: <%= @task["procrastinate"] %></h2>
+<h2>people: <%= @task["people"] %></h2>
+<h2>people: <%= @task["people"] %></h2>
+<h2>travel: <%= @task["travel"] %></h2>
+<h2>physical strength: <%= @task["strength"] %></h2>
+<h2>socialize: <%= @task["socialize"] %></h2><br><br>
+
+<h2>Overall prioritization level: <%= @task["priority_count"] %></h2>
+<form action="<%= @task["id"] %>" method="POST">
+	<input type="hidden" name="_method" value="delete">
+	<input type="submit" value="Delete">
+</form>
+<a href="<%= @task["id"]%>/edit"><button>Update</button></a>
